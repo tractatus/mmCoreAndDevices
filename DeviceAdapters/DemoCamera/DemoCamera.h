@@ -439,9 +439,11 @@ public:
    // ----------------
    int OnState(MM::PropertyBase* pProp, MM::ActionType eAct);
    int OnNumberOfStates(MM::PropertyBase* pProp, MM::ActionType eAct);
+   int OnTestProperty(MM::PropertyBase* pProp, MM::ActionType eAct);
 
 private:
    long numPos_;
+   long testProp_;
    bool initialized_;
    MM::MMTime changedTime_;
    long position_;

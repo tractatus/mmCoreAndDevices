@@ -2834,6 +2834,10 @@ position_(0)
    CPropertyAction* pAct = new CPropertyAction (this, &CDemoStateDevice::OnNumberOfStates);
    CreateIntegerProperty("Number of positions", 0, false, pAct, true);
 
+   pAct = new CPropertyAction(this, &CDemoStateDevice::OnTestProperty);
+   CreateIntegerProperty("Test Property", 0, false, pAct, true);
+   SetPropertyLimits("Test Property", 0, numPos_);
+
    // parent ID display
    CreateHubIDProperty();
 
@@ -2977,7 +2981,27 @@ int CDemoStateDevice::OnNumberOfStates(MM::PropertyBase* pProp, MM::ActionType e
    else if (eAct == MM::AfterSet)
    {
       if (!initialized_)
+      {
          pProp->Get(numPos_);
+         SetPropertyLimits("Test Property", 0, numPos_);
+      }
+   }
+
+   return DEVICE_OK;
+}
+
+int CDemoStateDevice::OnTestProperty(MM::PropertyBase* pProp, MM::ActionType eAct)
+{
+   if (eAct == MM::BeforeGet)
+   {
+      pProp->Set(testProp_);
+   }
+   else if (eAct == MM::AfterSet)
+   {
+      if (!initialized_)
+      {
+         pProp->Get(testProp_);
+      }
    }
 
    return DEVICE_OK;
