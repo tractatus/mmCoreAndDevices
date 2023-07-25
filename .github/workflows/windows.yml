@@ -13,8 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Delete CMake cache
+        run: |
+          rm -rf CMakeCache.txt CMakeFiles/
+
       - name: Configure CMake
         run: cmake .
 
       - name: Build
         run: cmake --build . --config Release
+
