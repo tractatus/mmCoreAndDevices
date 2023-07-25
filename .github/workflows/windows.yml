@@ -14,8 +14,8 @@ jobs:
         uses: egor-tensin/setup-mingw@v2
 
       - name: Configure CMake
-        run: cmake . --clean-first
+        run: cmake .
 
       - name: Build
-        run: cmake --build . --clean-first
+        run: cmake --build .
 
