@@ -23,6 +23,7 @@ set(MMDEVICE_SOURCES
 
 # Define the MMDevice library
 add_library(MMDevice STATIC ${MMDEVICE_SOURCES})
+target_compile_options(MMDevice PRIVATE -fPIC)
 
 # Include directories for libMMDevice
 target_include_directories(MMDevice
