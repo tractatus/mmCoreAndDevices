@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: egor-tensin/setup-mingw@v2
 
+      - name: show dir
+        run: ls
+
+      - name: show dir
+        run: pwd
+
       - name: Configure CMake
         run: cmake .
 
