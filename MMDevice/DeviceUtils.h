@@ -40,16 +40,18 @@
 // Definition of struct timezone and gettimeofday can be disabled in case
 // interfacing with some other system that also tries to define conflicting
 // symbols (e.g. Python <= 3.6).
-#if defined(_WIN32) && !defined(MMDEVICE_NO_GETTIMEOFDAY)
-struct timezone 
-{
-  int  tz_minuteswest; /* minutes W of Greenwich */
-  int  tz_dsttime;     /* type of dst correction */
-};
- 
-int gettimeofday(struct timeval *tv__, struct timezone *tz__);
 
-#endif
+// #if defined(_WIN32) && !defined(MMDEVICE_NO_GETTIMEOFDAY)
+// struct timezone 
+// {
+//   int  tz_minuteswest; /* minutes W of Greenwich */
+//   int  tz_dsttime;     /* type of dst correction */
+// };
+ 
+// int gettimeofday(struct timeval *tv__, struct timezone *tz__);
+
+// #endif 
+
 
 
 class CDeviceUtils

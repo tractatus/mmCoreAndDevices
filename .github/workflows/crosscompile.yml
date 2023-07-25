@@ -1,4 +1,4 @@
-name: windows
+name: Cross Compile with Cmake
 
 on: [push, pull_request]
 
