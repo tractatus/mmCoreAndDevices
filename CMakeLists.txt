@@ -1,15 +1,13 @@
+cmake_minimum_required(VERSION 3.12)
+
 # CMakeLists.txt in mmCoreAndDevices
 set(CMAKE_SUPPRESS_GENERATOR ON CACHE BOOL "Suppress generation of Visual Studio project files" FORCE)
 
-# Define an option to enable Windows build. cmake -S C:\path\to\source -B C:\path\to\build -D WINDOWS_BUILD=ON
-option(WINDOWS_BUILD "Build for Windows" OFF)
-
 # Add the preprocessor definition for _WINDOWS if building for Windows
-if (WINDOWS_BUILD)
-    add_definitions(-D_WINDOWS)
+if (WIN32)
+    add_compile_definitions(_WINDOWS)
 endif()
 
-cmake_minimum_required(VERSION 3.12)
 project(MicroManager)
 
 # Optionally set the C++ standard version (change to your required version)
