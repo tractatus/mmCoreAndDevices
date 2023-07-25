@@ -1,4 +1,8 @@
 # CMakeLists.txt in mmCoreAndDevices/MMDevice
+# Add the preprocessor definition for _WINDOWS if building for Windows
+if (WIN32)
+    add_definitions(-DMODULE_EXPORTS)
+endif()
 
 # Set the source files for the MMDevice library
 set(MMDEVICE_SOURCES
