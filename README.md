@@ -1,5 +1,5 @@
 
-[![linux](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/ubuntu.yml)
+[![linux](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/ubuntu.yml) [![macos](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/macos.yml/badge.svg)](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/macos.yml) [![windows](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/windows.yml/badge.svg)](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/windows.yml)
 
 # mmCoreAndDevices
 The c++ code at the core of the Micro-Manager project.
