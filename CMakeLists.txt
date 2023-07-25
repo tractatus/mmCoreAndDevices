@@ -1,4 +1,5 @@
 # CMakeLists.txt in mmCoreAndDevices
+set(CMAKE_SUPPRESS_GENERATOR ON CACHE BOOL "Suppress generation of Visual Studio project files" FORCE)
 
 cmake_minimum_required(VERSION 3.12)
 project(MicroManager)
