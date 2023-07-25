@@ -3,6 +3,11 @@
 # Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.15)
 
+# Add the preprocessor definition for _WINDOWS if building for Windows
+if (WIN32)
+    add_definitions(-DMODULE_EXPORTS)
+endif()
+
 # Include necessary modules
 include(CheckIncludeFiles)
 include(CheckLibraryExists)
