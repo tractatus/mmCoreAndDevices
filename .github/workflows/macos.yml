@@ -1,0 +1,20 @@
+name: macos
+
+on:
+  push:
+    branches:
+      - cmake
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure CMake
+        run: cmake .
+
+      - name: Build
+        run: make

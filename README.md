@@ -1,4 +1,6 @@
 
+[![linux](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/tractatus/mmCoreAndDevices/actions/workflows/ubuntu.yml)
+
 # mmCoreAndDevices
 The c++ code at the core of the Micro-Manager project.
 
