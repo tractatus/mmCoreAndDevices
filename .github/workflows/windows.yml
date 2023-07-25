@@ -16,5 +16,5 @@ jobs:
       # Configure CMake and Build
       - name: Configure CMake and Build
         run: |
-          cmake --build .
-
+          cmake .
+	  cmake --build . --clean-first  
