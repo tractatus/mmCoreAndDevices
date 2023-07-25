@@ -64,8 +64,6 @@ set(MMCORE_SOURCES
     LoadableModules/LoadedModule.h
     LoadableModules/LoadedModuleImpl.cpp
     LoadableModules/LoadedModuleImpl.h
-    LoadableModules/LoadedModuleImplUnix.cpp
-    LoadableModules/LoadedModuleImplUnix.h
     LogManager.cpp
     LogManager.h
     Logging/GenericStreamSink.h
@@ -97,6 +95,21 @@ set(MMCORE_SOURCES
     ThreadPool.cpp
     ThreadPool.h
 )
+
+# Conditionally include the platform-specific files for each platform
+if(WIN32)
+    # Add the Windows-specific source files
+    list(APPEND ${MMCORE_SOURCES}
+        LoadedModuleImplWindows.cpp
+        LoadedModuleImplWindows.h
+    )
+else()
+    # Add the Unix-specific source files
+    list(APPEND ${MMCORE_SOURCES}
+        LoadedModuleImplUnix.cpp
+        LoadedModuleImplUnix.h
+    )
+endif()
 
 # Define the MMCore library
 add_library(MMCore ${MMCORE_SOURCES})
