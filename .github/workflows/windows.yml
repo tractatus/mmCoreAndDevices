@@ -13,7 +13,6 @@ jobs:
       - name: Checkout code
         uses: egor-tensin/setup-mingw@v2
 
-      # Configure CMake and Build
       - name: Configure CMake and Build
         run: |
           cmake .
