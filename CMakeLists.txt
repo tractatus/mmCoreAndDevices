@@ -6,7 +6,7 @@ option(WINDOWS_BUILD "Build for Windows" OFF)
 
 # Add the preprocessor definition for _WINDOWS if building for Windows
 if (WINDOWS_BUILD)
-    add_compile_definitions(_WINDOWS)
+    add_definitions(-D_WINDOWS)
 endif()
 
 cmake_minimum_required(VERSION 3.12)
