@@ -13,8 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Configure CMake
-        run: cmake .
+      # Install MinGW
+      - name: Install MinGW
+        run: |
+          choco install mingw -y --no-progress
+          refreshenv
 
-      - name: Build
-        run: cmake --build .
+      # Configure CMake and Build
+      - name: Configure CMake and Build
+        run: |
+          cmake --build . --config Release
