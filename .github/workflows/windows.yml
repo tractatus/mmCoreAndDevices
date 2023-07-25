@@ -11,9 +11,11 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: egor-tensin/setup-mingw@v2
+        uses: actions/checkout@v2
 
-      - name: Configure CMake and Build
-        run: |
-          cmake .
-	  cmake --build . --clean-first  
+      - name: Configure CMake
+        run: cmake .
+
+      - name: Build
+        run: cmake --build . --clean-first
+
