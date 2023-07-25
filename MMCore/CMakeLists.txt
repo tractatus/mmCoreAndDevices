@@ -1,9 +1,4 @@
 # CMakeLists.txt in mmCoreAndDevices/MMCore
-# Add the preprocessor definition for _WINDOWS if building for Windows
-if (WIN32)
-    add_definitions(-DMODULE_EXPORTS)
-endif()
-
 # Set the source files for the MMCore library
 set(MMCORE_SOURCES
     ../MMDevice/FixSnprintf.h
