@@ -14,10 +14,13 @@ jobs:
         uses: egor-tensin/setup-mingw@v2
 
       - name: show dir
-        run: ls
+        run: gci
 
       - name: show dir
         run: pwd
+
+      - name: show dir
+        run: cd ..
 
       - name: Configure CMake
         run: cmake .
