@@ -1,4 +1,7 @@
 # CMakeLists.txt in mmCoreAndDevices/MMDevice
+if (WIN32)
+    add_definitions(-DMODULE_EXPORTS)
+endif()
 
 # Set the source files for the MMDevice library
 set(MMDEVICE_SOURCES
