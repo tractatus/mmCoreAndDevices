@@ -59,22 +59,22 @@ public:
 static std::vector<DeviceInfo> g_registeredDevices;
 
 
-MODULE_API long GetModuleVersion()
+long GetModuleVersion()
 {
    return MODULE_INTERFACE_VERSION;   
 }
 
-MODULE_API long GetDeviceInterfaceVersion()
+long GetDeviceInterfaceVersion()
 {
    return DEVICE_INTERFACE_VERSION;   
 }
 
-MODULE_API unsigned GetNumberOfDevices()
+unsigned GetNumberOfDevices()
 {
    return static_cast<unsigned>(g_registeredDevices.size());
 }
 
-MODULE_API bool GetDeviceName(unsigned deviceIndex, char* name, unsigned bufLen)
+bool GetDeviceName(unsigned deviceIndex, char* name, unsigned bufLen)
 {
    if (deviceIndex >= g_registeredDevices.size())
       return false;
@@ -88,7 +88,7 @@ MODULE_API bool GetDeviceName(unsigned deviceIndex, char* name, unsigned bufLen)
    return true;
 }
 
-MODULE_API bool GetDeviceType(const char* deviceName, int* type)
+bool GetDeviceType(const char* deviceName, int* type)
 {
    std::vector<DeviceInfo>::const_iterator it =
       std::find_if(g_registeredDevices.begin(), g_registeredDevices.end(),
@@ -106,7 +106,7 @@ MODULE_API bool GetDeviceType(const char* deviceName, int* type)
    return true;
 }
 
-MODULE_API bool GetDeviceDescription(const char* deviceName, char* description, unsigned bufLen)
+bool GetDeviceDescription(const char* deviceName, char* description, unsigned bufLen)
 {
    std::vector<DeviceInfo>::const_iterator it =
       std::find_if(g_registeredDevices.begin(), g_registeredDevices.end(),

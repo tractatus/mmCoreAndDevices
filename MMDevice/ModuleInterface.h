@@ -97,7 +97,7 @@ extern "C" {
    // A common implementation is provided for the following functions.
    // Individual device adapters need not concern themselves with these
    // details.
-   long GetModuleVersion();
+   MODULE_API long GetModuleVersion();
    MODULE_API long GetDeviceInterfaceVersion();
    MODULE_API unsigned GetNumberOfDevices();
    MODULE_API bool GetDeviceName(unsigned deviceIndex, char* name, unsigned bufferLength);
