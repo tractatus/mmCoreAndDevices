@@ -1,4 +1,4 @@
-name: Cross Compile with Cmake
+name: windows msvc
 
 on: [push, pull_request]
 

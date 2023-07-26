@@ -1,4 +1,4 @@
-name: MinGW Build with Cmake
+name: windows mingw
 
 on: [push, pull_request]
 
