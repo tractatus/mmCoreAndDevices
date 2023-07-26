@@ -6,6 +6,7 @@ set(CMAKE_SUPPRESS_GENERATOR ON CACHE BOOL "Suppress generation of Visual Studio
 # Add the preprocessor definition for _WINDOWS if building for Windows
 if (WIN32)
     add_compile_definitions(_WINDOWS)
+    add_definitions(_WIN32)
     #add_definitions(-DMODULE_EXPORTS)
 endif()
 

@@ -30,7 +30,7 @@
 
 #include "MMDevice.h"
 
-#ifdef _WIN32
+#ifdef WIN32
    #ifdef MODULE_EXPORTS
       #define MODULE_API __declspec(dllexport)
    #else
